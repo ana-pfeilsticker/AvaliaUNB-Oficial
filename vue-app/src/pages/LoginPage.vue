@@ -84,7 +84,7 @@ export default {
 					this.$refs.emailInput.value,
 					this.$refs.senhaInput.value
 				);
-				if (!response.success) {
+				if (!response) {
 					this.erro =
 						"Erro ao fazer login. Por favor, verifique suas credenciais.";
 					this.loading = false;
