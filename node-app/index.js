@@ -1,6 +1,5 @@
 import { Sequelize } from "sequelize";
 import express from "express";
-import cors from "cors";
 import dotenv from "dotenv";
 import * as User from "./controllers/UserMET.js";
 import * as Professor from "./controllers/ProfessorMET.js";
@@ -10,16 +9,8 @@ import * as Comentario from "./controllers/ComentarioMET.js";
 
 dotenv.config();
 
-const corsOptions = {
-  origin: process.env.URL_FRONT_END,
-  methods: ["GET", "POST", "PUT", "DELETE"],
-  allowedHeaders: ["Content-Type", "Authorization"],
-  credentials: true,
-};
-
 const app = express();
 
-app.use(cors(corsOptions));
 app.use(express.json());
 
 const sequelize = new Sequelize({
