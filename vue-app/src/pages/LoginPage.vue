@@ -70,7 +70,7 @@ export default {
 
 		async autenticarLogin(emailEntrada, senhaEntrada) {
 			try {
-				autenticaUsuario(emailEntrada, senhaEntrada);
+				await autenticaUsuario(emailEntrada, senhaEntrada);
 			} catch (error) {
 				console.log(error);
 			}
